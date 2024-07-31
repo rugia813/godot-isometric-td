@@ -7,8 +7,8 @@ extends Node2D
 
 
 func _ready() -> void:
-	var t = tower.instantiate()
-	sprite.texture = t.get_child(0).texture
+	tower.changed.connect(get_sprite)
+	get_sprite()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -19,3 +19,6 @@ func _process(delta: float) -> void:
 	sprite.position = to_global(co)
 	
 	
+func get_sprite():
+	var t = tower.instantiate()
+	sprite.texture = t.get_child(0).texture

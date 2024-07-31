@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://uf3cjynehc6m"]
+
+[ext_resource type="Script" path="res://cursor/cursor.gd" id="1_5qp0s"]
+[ext_resource type="Texture2D" uid="uid://br5vmakgaey20" path="res://cursor/fire.png" id="1_rncta"]
+
+[node name="Cursor" type="Node2D"]
+script = ExtResource("1_5qp0s")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -500
+limit_top = -500
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_left_margin = 0.8
+drag_top_margin = 0.8
+drag_right_margin = 0.8
+drag_bottom_margin = 0.8
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = ExtResource("1_rncta")
