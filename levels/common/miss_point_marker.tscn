@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf23kt0uiy10r"]
+
+[ext_resource type="Script" path="res://levels/common/miss_area.gd" id="1_btrd6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_knhtu"]
+size = Vector2(48, 47)
+
+[node name="MissPointMarker" type="Marker2D"]
+position = Vector2(0, 449)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_btrd6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_knhtu")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

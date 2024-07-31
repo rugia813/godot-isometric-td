@@ -8,6 +8,7 @@ normal_texture = ExtResource("1_cfm1h")
 specular_texture = ExtResource("1_cfm1h")
 
 [node name="Drifter" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(5.96046e-08, -69)

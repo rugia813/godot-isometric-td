@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
+class_name Enemy
 
 @export var target : Marker2D
 
-const SPEED = 100.0
+const SPEED = 400.0
 @onready var navAgent := $NavigationAgent2D
 
 func _ready() -> void:
