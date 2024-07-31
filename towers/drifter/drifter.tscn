@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtog7uqp4b56o"]
+
+[ext_resource type="Texture2D" uid="uid://c6c0r5tq2sjsy" path="res://towers/drifter/drifter_l3000.png" id="1_cfm1h"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_pt7w1"]
+diffuse_texture = ExtResource("1_cfm1h")
+normal_texture = ExtResource("1_cfm1h")
+specular_texture = ExtResource("1_cfm1h")
+
+[node name="Drifter" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5.96046e-08, -69)
+scale = Vector2(0.7, 0.7)
+texture = SubResource("CanvasTexture_pt7w1")
