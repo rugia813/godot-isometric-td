@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cte63dwqeyt01"]
+[gd_scene load_steps=19 format=4 uid="uid://cte63dwqeyt01"]
 
 [ext_resource type="Texture2D" uid="uid://buslo86sw1e53" path="res://tiles/kenney_tower-defense/Spritesheet/evenly_fit.png" id="1_5i40r"]
 [ext_resource type="PackedScene" uid="uid://1bqybepbj03k" path="res://enemies/marine/Marine.tscn" id="2_2upi3"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bf23kt0uiy10r" path="res://levels/common/miss_point_marker.tscn" id="4_pr3gx"]
 [ext_resource type="PackedScene" uid="uid://uf3cjynehc6m" path="res://cursor/Cursor.tscn" id="5_oxm6x"]
 [ext_resource type="PackedScene" uid="uid://cp7sxpqtdeqqj" path="res://enemies/spawner/EnemySpawner.tscn" id="6_audhg"]
+[ext_resource type="PackedScene" uid="uid://bouqski3615ou" path="res://ui/MainUI.tscn" id="8_l2cck"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_st76x"]
 vertices = PackedVector2Array(68, -16, 0, 19, -67.5, -14.5, 0.5, -49.5)
@@ -238,10 +239,14 @@ process_mode = 4
 tilemap = NodePath("../TileMapLayer2")
 tower = ExtResource("2_hv0h7")
 
-[node name="Cursor" parent="." instance=ExtResource("5_oxm6x")]
-position = Vector2(591, 344)
-
 [node name="EnemySpawner" parent="." node_paths=PackedStringArray("target") instance=ExtResource("6_audhg")]
 position = Vector2(136, 111)
 enemy_type = ExtResource("2_2upi3")
 target = NodePath("../MissPointMarker")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainUi" parent="CanvasLayer" instance=ExtResource("8_l2cck")]
+
+[node name="Cursor" parent="CanvasLayer" instance=ExtResource("5_oxm6x")]
+position = Vector2(591, 344)

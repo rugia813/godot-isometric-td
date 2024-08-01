@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://uf3cjynehc6m"]
+[gd_scene load_steps=4 format=3 uid="uid://uf3cjynehc6m"]
 
 [ext_resource type="Script" path="res://cursor/cursor.gd" id="1_5qp0s"]
 [ext_resource type="Texture2D" uid="uid://br5vmakgaey20" path="res://cursor/fire.png" id="1_rncta"]
+[ext_resource type="Script" path="res://cursor/camera_2d.gd" id="2_7l1pa"]
 
 [node name="Cursor" type="Node2D"]
 script = ExtResource("1_5qp0s")
@@ -19,6 +20,7 @@ drag_right_margin = 0.8
 drag_bottom_margin = 0.8
 editor_draw_limits = true
 editor_draw_drag_margin = true
+script = ExtResource("2_7l1pa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(8, 8)
