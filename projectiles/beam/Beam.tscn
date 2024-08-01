@@ -1,10 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://buh17iad18xi"]
+[gd_scene load_steps=4 format=3 uid="uid://buh17iad18xi"]
 
 [ext_resource type="Texture2D" uid="uid://ca7q76kngxfhw" path="res://projectiles/beams.png" id="1_imxg4"]
+[ext_resource type="Script" path="res://projectiles/beam/beam.gd" id="1_k6mxe"]
 
-[node name="Beam" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_b8jnq"]
+
+[node name="Beam" type="Area2D"]
+script = ExtResource("1_k6mxe")
+speed = 3000
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
 texture = ExtResource("1_imxg4")
 region_enabled = true
 region_rect = Rect2(81, 315, 31, 58)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_b8jnq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

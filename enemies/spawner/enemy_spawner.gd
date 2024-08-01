@@ -19,4 +19,5 @@ func _on_timer_timeout() -> void:
 	var enemy = enemy_type.instantiate()
 	enemy.global_position = global_position
 	enemy.target = target
+	enemy.add_to_group("enemy")
 	enemy_group.add_child(enemy)
