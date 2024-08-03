@@ -15,6 +15,10 @@ run/main_scene="res://levels/Dev.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Game="*res://globals/game.gd"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"

@@ -216,20 +216,18 @@ tile_set = SubResource("TileSet_vrc2l")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 y_sort_enabled = true
-position = Vector2(-131, -205)
-tile_map_data = PackedByteArray("AAAEAAoAAAAAAAAAAQAEAAkAAAAAAAAAAQADAAkAAAAAAAAAAQAEAAgAAAAAAAAAAQAGABMAAAAAAAAAAQADABcAAAAAAAAAAQAGAAsAAAAAAAAAAQADABAAAAAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAADAAQAAAAAAAAAAQAFAA0AAAAAAAAAAQAAAAsAAAAAAAAAAQA=")
 tile_set = SubResource("TileSet_7kj6o")
 
 [node name="Enemies" type="Node2D" parent="TileMapLayer2"]
 y_sort_enabled = true
-position = Vector2(131, 205)
 
 [node name="Enemy" parent="TileMapLayer2/Enemies" node_paths=PackedStringArray("target") instance=ExtResource("2_2upi3")]
-position = Vector2(360, 541)
+position = Vector2(847, 539)
 target = NodePath("../../../MissPointMarker")
 
 [node name="Enemy2" parent="TileMapLayer2/Enemies" node_paths=PackedStringArray("target") instance=ExtResource("2_2upi3")]
-position = Vector2(456, 207)
+position = Vector2(572, 200)
 target = NodePath("../../../MissPointMarker")
 
 [node name="MissPointMarker" parent="." instance=ExtResource("4_pr3gx")]
@@ -237,7 +235,6 @@ target = NodePath("../../../MissPointMarker")
 [node name="Builder" parent="." node_paths=PackedStringArray("tilemap") instance=ExtResource("4_d4f77")]
 process_mode = 4
 tilemap = NodePath("../TileMapLayer2")
-tower = ExtResource("2_hv0h7")
 
 [node name="EnemySpawner" parent="." node_paths=PackedStringArray("target") instance=ExtResource("6_audhg")]
 position = Vector2(136, 111)
@@ -250,3 +247,5 @@ target = NodePath("../MissPointMarker")
 
 [node name="Cursor" parent="CanvasLayer" instance=ExtResource("5_oxm6x")]
 position = Vector2(591, 344)
+
+[connection signal="tower_selected" from="CanvasLayer/MainUi" to="Builder" method="_on_main_ui_tower_selected"]

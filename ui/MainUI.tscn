@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bouqski3615ou"]
+[gd_scene load_steps=2 format=3 uid="uid://bouqski3615ou"]
+
+[ext_resource type="Script" path="res://ui/main_ui.gd" id="1_kqlen"]
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kqlen")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -15,10 +18,11 @@ offset_top = 8.0
 offset_right = 1143.0
 offset_bottom = 367.0
 
-[node name="Button" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 14.0
-offset_right = 96.0
-offset_bottom = 63.0
-text = "Tower"
+[node name="VFlowContainer" type="VFlowContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+last_wrap_alignment = 1

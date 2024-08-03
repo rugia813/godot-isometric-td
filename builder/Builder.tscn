@@ -3,8 +3,4 @@
 [ext_resource type="Script" path="res://builder/builder.gd" id="1_8mvuc"]
 
 [node name="Builder" type="Node2D"]
-visible = false
 script = ExtResource("1_8mvuc")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.7, 0.7)
