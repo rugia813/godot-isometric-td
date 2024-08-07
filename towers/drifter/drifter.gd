@@ -7,7 +7,7 @@ class_name Tower
 @export var attack_range := 300
 @export var attack_dmg := 1
 
-@export var is_built := false
+@export var is_built := true
 
 @onready var state_machine: StateMachine = $StateMachine
 
@@ -16,5 +16,7 @@ class_name Tower
 func _ready() -> void:
 	if is_built:
 		state_machine.transition_to("Idle")
+		add_to_group("tower")
 	else:
 		state_machine.transition_to("Virtual")
+		

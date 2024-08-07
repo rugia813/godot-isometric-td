@@ -1,9 +1,15 @@
 extends Node2D
 
-@export var tilemap : TileMapLayer
+@export var terrain_tilemap : TileMapLayer
+@export var tower_tilemap : TileMapLayer
 @export var tower_type : PackedScene
 
 var tower : Tower
+
+
+signal place_start
+signal place_end
+
 
 #func _ready() -> void:
 	#tower.changed.connect(get_tower)
@@ -12,14 +18,14 @@ var tower : Tower
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var mouse_tile = get_global_mouse_position()
-	var map_pos = tilemap.local_to_map(mouse_tile)
-	var co = tilemap.map_to_local(map_pos)
+	var map_pos = tower_tilemap.local_to_map(mouse_tile)
+	var co = tower_tilemap.map_to_local(map_pos)
 	
 	if tower:
 		tower.global_position = to_global(co)
 
 
-func _input(event: InputEvent) -> void:		
+func _unhandled_input(event: InputEvent) -> void:
 	# esc
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
 		clear_tower()
@@ -28,17 +34,27 @@ func _input(event: InputEvent) -> void:
 		# left
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if tower_type and tower:
-				var mouse_tile = get_global_mouse_position()
-				var map_pos = tilemap.local_to_map(mouse_tile)
-				var co = tilemap.map_to_local(map_pos)
+				# check tile availability
+				var clicked_cell = terrain_tilemap.local_to_map(terrain_tilemap.get_local_mouse_position())
+				var atlas_coords = terrain_tilemap.get_cell_atlas_coords(clicked_cell)
+				if (atlas_coords.x != 1 or atlas_coords.y != 0):
+					return
 				
-				#var id = tilemap.get_cell_source_id(map_pos)
-				#print(map_pos, id)
-				#tilemap.set_cell(map_pos, 0)
+				# build tower
+				var mouse_tile = get_global_mouse_position()
+				var map_pos = tower_tilemap.local_to_map(mouse_tile)
+				var co = tower_tilemap.map_to_local(map_pos)
+				
+				# check if tile has tower
+				var towers = get_tree().get_nodes_in_group("tower")
+				for t in towers:
+					if t.position == co:
+						return
 				
 				tower.global_position = co
 				tower.is_built = true
 				tower.state_machine.transition_to("Idle")
+				tower.add_to_group("tower")
 				clear_tower()
 		# right
 		elif event.button_index == MOUSE_BUTTON_RIGHT:
@@ -47,12 +63,15 @@ func _input(event: InputEvent) -> void:
 	
 func get_tower():
 	tower = tower_type.instantiate()
-	get_tree().root.add_child(tower)
+	tower.is_built = false
+	get_tree().root.get_node("Dev/TileMapLayer2").add_child(tower)
+	place_start.emit()
 
 func clear_tower():
-	if not tower.is_built:
+	if tower and not tower.is_built:
 		tower.queue_free()
 	tower = null
+	place_end.emit()
 
 
 func _on_main_ui_tower_selected(_tower) -> void:
