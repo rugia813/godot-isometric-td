@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	var enemy = enemy_type.instantiate()
-	enemy.global_position = global_position
+	enemy.global_position = global_position + Vector2(randf_range(0, 50), randf_range(0, 50))
 	enemy.target = target
 	enemy.add_to_group("enemy")
 	enemy_group.add_child(enemy)

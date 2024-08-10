@@ -2,7 +2,7 @@ extends Area2D
 
 
 @export var speed := 500
-@export var dmg := 2
+@export var dmg := 3
 
 var target : CharacterBody2D
 var target_last_pos : Vector2
