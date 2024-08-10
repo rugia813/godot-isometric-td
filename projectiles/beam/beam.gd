@@ -2,6 +2,7 @@ extends Area2D
 
 
 @export var speed := 500
+@export var dmg := 2
 
 var target : CharacterBody2D
 var target_last_pos : Vector2
@@ -29,5 +30,5 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body == target:
-		body.call_deferred("queue_free")
+		body.take_dmg(dmg)
 		call_deferred("queue_free")

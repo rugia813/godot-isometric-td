@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b8akd4x5seqjm"]
 
-[ext_resource type="PackedScene" uid="uid://dtog7uqp4b56o" path="res://towers/drifter/drifter.tscn" id="1_giuv3"]
+[ext_resource type="PackedScene" uid="uid://dtog7uqp4b56o" path="res://towers/tower/Tower.tscn" id="1_giuv3"]
 [ext_resource type="Texture2D" uid="uid://cfpcq22ybil70" path="res://towers/slab/VexArchitecture_20.png" id="2_yuplv"]
 
 [node name="Slab" instance=ExtResource("1_giuv3")]

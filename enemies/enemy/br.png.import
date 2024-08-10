@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6c0r5tq2sjsy"
-path="res://.godot/imported/drifter_l3000.png-79dbe67fb1428676b3ab1fc29eda340e.ctex"
+uid="uid://cn2vuh2y6q8gp"
+path="res://.godot/imported/br.png-826dd7b84515e8747d3f2fafd74fa19a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://towers/drifter/drifter_l3000.png"
-dest_files=["res://.godot/imported/drifter_l3000.png-79dbe67fb1428676b3ab1fc29eda340e.ctex"]
+source_file="res://enemies/enemy/br.png"
+dest_files=["res://.godot/imported/br.png-826dd7b84515e8747d3f2fafd74fa19a.ctex"]
 
 [params]
 

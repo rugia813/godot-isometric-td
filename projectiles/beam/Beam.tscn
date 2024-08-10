@@ -7,7 +7,6 @@
 
 [node name="Beam" type="Area2D"]
 script = ExtResource("1_k6mxe")
-speed = 3000
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708

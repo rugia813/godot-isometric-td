@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqf2hhjfo6vlu"
-path="res://.godot/imported/d315.png-bcf2dfb47af49d000b2cb06a65b390d7.ctex"
+uid="uid://xul4ypr4u7ep"
+path="res://.godot/imported/d90.png-a963742e74dc44945e7e0bf34aa0bd7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/marine/d315.png"
-dest_files=["res://.godot/imported/d315.png-bcf2dfb47af49d000b2cb06a65b390d7.ctex"]
+source_file="res://enemies/enemy/d90.png"
+dest_files=["res://.godot/imported/d90.png-a963742e74dc44945e7e0bf34aa0bd7f.ctex"]
 
 [params]
 

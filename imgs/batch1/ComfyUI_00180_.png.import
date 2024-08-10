@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qrhchltsmpkm"
-path="res://.godot/imported/d270.png-1cc55b71351c15567f66b0f1e3456dda.ctex"
+uid="uid://raeqomdmk5e5"
+path="res://.godot/imported/ComfyUI_00180_.png-2113218bd453db7f818d8e648e7887b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/marine/d270.png"
-dest_files=["res://.godot/imported/d270.png-1cc55b71351c15567f66b0f1e3456dda.ctex"]
+source_file="res://imgs/batch1/ComfyUI_00180_.png"
+dest_files=["res://.godot/imported/ComfyUI_00180_.png-2113218bd453db7f818d8e648e7887b0.ctex"]
 
 [params]
 

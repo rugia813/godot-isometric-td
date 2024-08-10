@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://dtog7uqp4b56o"]
+
+[ext_resource type="Script" path="res://towers/tower/tower.gd" id="1_s7on2"]
+[ext_resource type="PackedScene" uid="uid://buh17iad18xi" path="res://projectiles/beam/Beam.tscn" id="2_vbnfh"]
+[ext_resource type="Texture2D" uid="uid://raeqomdmk5e5" path="res://imgs/batch1/ComfyUI_00180_.png" id="3_ofic4"]
+[ext_resource type="Script" path="res://utils/stateMachine/StateMachine.gd" id="4_b1guc"]
+[ext_resource type="Script" path="res://towers/tower/idle.gd" id="5_ajhat"]
+[ext_resource type="Script" path="res://towers/tower/virtual.gd" id="6_0arju"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dix1c"]
+radius = 300.0
+
+[node name="Drifter" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_s7on2")
+projectile_type = ExtResource("2_vbnfh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -67)
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("3_ofic4")
+
+[node name="AttackRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
+shape = SubResource("CircleShape2D_dix1c")
+
+[node name="AttackPoint" type="Marker2D" parent="."]
+position = Vector2(57, -85)
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("4_b1guc")
+initial_state = NodePath("Virtual")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("5_ajhat")
+
+[node name="AttackCDTimer" type="Timer" parent="StateMachine/Idle"]
+
+[node name="Virtual" type="Node" parent="StateMachine"]
+script = ExtResource("6_0arju")
+
+[connection signal="timeout" from="StateMachine/Idle/AttackCDTimer" to="StateMachine/Idle" method="_on_attack_cd_timer_timeout"]

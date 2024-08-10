@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b228x6464chxo"
-path="res://.godot/imported/d180.png-f028a33483f44fbeb762df8f9a934912.ctex"
+uid="uid://doprqnvxta846"
+path="res://.godot/imported/d0.png-abc3a9b6d0f7d992233e6eca4430a719.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/marine/d180.png"
-dest_files=["res://.godot/imported/d180.png-f028a33483f44fbeb762df8f9a934912.ctex"]
+source_file="res://enemies/enemy/d0.png"
+dest_files=["res://.godot/imported/d0.png-abc3a9b6d0f7d992233e6eca4430a719.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@ extends Node
 
 
 var available_towers := [
-	preload("res://towers/drifter/drifter.tscn"),
+	preload("res://towers/tower/Tower.tscn"),
 	preload("res://towers/slab/Slab.tscn"),
 ]
 
