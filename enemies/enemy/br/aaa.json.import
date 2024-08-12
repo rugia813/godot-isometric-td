@@ -1,0 +1,15 @@
+[remap]
+
+importer="snkkid.SpriteSheetImporter"
+type="Resource"
+uid="uid://2gtn5vuqsn2a"
+path="res://.godot/imported/aaa.json-b9bf18f97aac10ff54d3b86f08bcf66f.res"
+
+[deps]
+
+source_file="res://enemies/enemy/br/aaa.json"
+dest_files=["res://.godot/imported/aaa.json-b9bf18f97aac10ff54d3b86f08bcf66f.res"]
+
+[params]
+
+Import_As_Atlas=true
