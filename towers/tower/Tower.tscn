@@ -16,13 +16,14 @@ script = ExtResource("1_s7on2")
 projectile_type = ExtResource("2_vbnfh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2, -67)
-scale = Vector2(0.165, 0.165)
+position = Vector2(0, -75.57)
+scale = Vector2(0.16, 0.16)
 texture = ExtResource("3_ofic4")
 
 [node name="AttackRange" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
+visible = false
 shape = SubResource("CircleShape2D_dix1c")
 
 [node name="AttackPoint" type="Marker2D" parent="."]

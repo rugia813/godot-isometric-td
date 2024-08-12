@@ -17,9 +17,9 @@ signal place_end
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var mouse_tile = get_global_mouse_position()
-	var map_pos = tower_tilemap.local_to_map(mouse_tile)
-	var co = tower_tilemap.map_to_local(map_pos)
+	var mouse_tile = terrain_tilemap.get_local_mouse_position()
+	var map_pos = terrain_tilemap.local_to_map(mouse_tile)
+	var co = terrain_tilemap.map_to_local(map_pos)
 	
 	if tower:
 		tower.global_position = to_global(co)
@@ -34,17 +34,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		# left
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if tower_type and tower:
-				# check tile availability
-				var clicked_cell = terrain_tilemap.local_to_map(terrain_tilemap.get_local_mouse_position())
-				#var atlas_coords = terrain_tilemap.get_cell_atlas_coords(clicked_cell)
-				var can_build = terrain_tilemap.get_cell_tile_data(clicked_cell).get_custom_data("can_build")
-				if (!can_build):
+				if !check_can_build():
 					return
 				
 				# build tower
-				var mouse_tile = get_global_mouse_position()
-				var map_pos = tower_tilemap.local_to_map(mouse_tile)
-				var co = tower_tilemap.map_to_local(map_pos)
+				var mouse_tile = terrain_tilemap.get_local_mouse_position()
+				var map_pos = terrain_tilemap.local_to_map(mouse_tile)
+				var co = terrain_tilemap.map_to_local(map_pos)
 				
 				# check if tile has tower
 				var towers = get_tree().get_nodes_in_group("tower")
@@ -60,6 +56,22 @@ func _unhandled_input(event: InputEvent) -> void:
 		# right
 		elif event.button_index == MOUSE_BUTTON_RIGHT:
 			clear_tower()
+	elif event is InputEventMouseMotion and is_instance_valid(tower):
+		if !check_can_build():
+			tower.modulate = Color(1,0,0,1)
+		else:
+			tower.modulate = Color(0,1,0,1)
+		
+
+func check_can_build():
+	var clicked_cell = terrain_tilemap.local_to_map(terrain_tilemap.get_local_mouse_position())
+	var tile_data = terrain_tilemap.get_cell_tile_data(clicked_cell)
+	if !tile_data:
+		return false
+	var can_build = tile_data.get_custom_data("can_build")
+	if !can_build:
+		return false
+	return true
 	
 	
 func get_tower():
