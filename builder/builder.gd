@@ -36,8 +36,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			if tower_type and tower:
 				# check tile availability
 				var clicked_cell = terrain_tilemap.local_to_map(terrain_tilemap.get_local_mouse_position())
-				var atlas_coords = terrain_tilemap.get_cell_atlas_coords(clicked_cell)
-				if (atlas_coords.x != 1 or atlas_coords.y != 0):
+				#var atlas_coords = terrain_tilemap.get_cell_atlas_coords(clicked_cell)
+				var can_build = terrain_tilemap.get_cell_tile_data(clicked_cell).get_custom_data("can_build")
+				if (!can_build):
 					return
 				
 				# build tower
@@ -64,7 +65,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func get_tower():
 	tower = tower_type.instantiate()
 	tower.is_built = false
-	get_tree().root.get_node("Dev/TileMapLayer2").add_child(tower)
+	get_tree().root.get_node("Dev/TowerTileMapLayer").add_child(tower)
 	place_start.emit()
 
 func clear_tower():

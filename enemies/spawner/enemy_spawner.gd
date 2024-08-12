@@ -7,7 +7,7 @@ var enemy_group : Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	enemy_group = get_tree().root.get_node("Dev/TileMapLayer2/Enemies")
+	enemy_group = get_tree().root.get_node("Dev/TowerTileMapLayer/Enemies")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

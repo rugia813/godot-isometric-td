@@ -333,7 +333,6 @@ nodes/output/position = Vector2(760, 180)
 node_connections = [&"Blend2", 1, &"BlendSpace2D", &"output", 0, &"Idle"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_66v6v"]
-load_path = "res://.godot/imported/br.png-826dd7b84515e8747d3f2fafd74fa19a.ctex"
 
 [sub_resource type="Theme" id="Theme_0ga54"]
 

@@ -13,8 +13,8 @@ func _tile_data_runtime_update(coords: Vector2i, tile_data: TileData) -> void:
 	if is_highlighted == false:
 		tile_data.modulate = Color.WHITE
 	else:
-		var atlas_coords = get_cell_atlas_coords(coords)
-		if atlas_coords.x == 1 and atlas_coords.y == 0:
+		var can_build = tile_data.get_custom_data("can_build")
+		if can_build:
 			tile_data.modulate = Color(.7,1.3,.7,1)
 		else:
 			tile_data.modulate = Color(1,.5,.5,.9)
