@@ -1,0 +1,327 @@
+{
+	"./dhk(16)": {
+		"frame": {
+			"x": 0,
+			"y": 1168,
+			"width": 315,
+			"height": 188
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(17)": {
+		"frame": {
+			"x": 738,
+			"y": 588,
+			"width": 331,
+			"height": 188
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(18)": {
+		"frame": {
+			"x": 319,
+			"y": 973,
+			"width": 307,
+			"height": 195
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(19)": {
+		"frame": {
+			"x": 654,
+			"y": 778,
+			"width": 315,
+			"height": 193
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(20)": {
+		"frame": {
+			"x": 0,
+			"y": 388,
+			"width": 355,
+			"height": 197
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(21)": {
+		"frame": {
+			"x": 724,
+			"y": 384,
+			"width": 335,
+			"height": 190
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(22)": {
+		"frame": {
+			"x": 742,
+			"y": 0,
+			"width": 341,
+			"height": 194
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(23)": {
+		"frame": {
+			"x": 0,
+			"y": 973,
+			"width": 319,
+			"height": 195
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(24)": {
+		"frame": {
+			"x": 0,
+			"y": 0,
+			"width": 373,
+			"height": 195
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(25)": {
+		"frame": {
+			"x": 921,
+			"y": 1161,
+			"width": 283,
+			"height": 194
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(26)": {
+		"frame": {
+			"x": 375,
+			"y": 392,
+			"width": 347,
+			"height": 196
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(27)": {
+		"frame": {
+			"x": 0,
+			"y": 778,
+			"width": 331,
+			"height": 195
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(28)": {
+		"frame": {
+			"x": 724,
+			"y": 195,
+			"width": 343,
+			"height": 189
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(29)": {
+		"frame": {
+			"x": 626,
+			"y": 1161,
+			"width": 295,
+			"height": 194
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(30)": {
+		"frame": {
+			"x": 969,
+			"y": 778,
+			"width": 299,
+			"height": 193
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(31)": {
+		"frame": {
+			"x": 331,
+			"y": 778,
+			"width": 323,
+			"height": 195
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(32)": {
+		"frame": {
+			"x": 373,
+			"y": 0,
+			"width": 369,
+			"height": 195
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(33)": {
+		"frame": {
+			"x": 315,
+			"y": 1168,
+			"width": 305,
+			"height": 193
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(34)": {
+		"frame": {
+			"x": 375,
+			"y": 195,
+			"width": 349,
+			"height": 197
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(35)": {
+		"frame": {
+			"x": 375,
+			"y": 588,
+			"width": 363,
+			"height": 185
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(36)": {
+		"frame": {
+			"x": 0,
+			"y": 195,
+			"width": 375,
+			"height": 193
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(37)": {
+		"frame": {
+			"x": 941,
+			"y": 973,
+			"width": 303,
+			"height": 188
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(38)": {
+		"frame": {
+			"x": 626,
+			"y": 973,
+			"width": 315,
+			"height": 188
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(39)": {
+		"frame": {
+			"x": 0,
+			"y": 585,
+			"width": 351,
+			"height": 193
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	},
+	"./dhk(40)": {
+		"frame": {
+			"x": 1059,
+			"y": 384,
+			"width": 245,
+			"height": 180
+		},
+		"sourceSize": {
+			"width": 395,
+			"height": 197
+		},
+		"rotated": false
+	}
+}

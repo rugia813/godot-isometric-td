@@ -1,0 +1,15 @@
+[remap]
+
+importer="snkkid.SpriteSheetImporter"
+type="Resource"
+uid="uid://b3sael08ofxkb"
+path="res://.godot/imported/sats.json-adf1faec9a558de9b0116083782b03c8.res"
+
+[deps]
+
+source_file="res://decors/sats.json"
+dest_files=["res://.godot/imported/sats.json-adf1faec9a558de9b0116083782b03c8.res"]
+
+[params]
+
+Import_As_Atlas=true
